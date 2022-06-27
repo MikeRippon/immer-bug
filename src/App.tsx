@@ -27,28 +27,28 @@ function App() {
 
     <h4>Person 1: {person.person1.age} years old</h4>
     <button onClick={() => person.increaseAgePerson1Nested()}>
-      Increase age (no bug - setState + explicit produce)
+      1. Increase age (no bug - setState + explicit produce)
     </button>
 
     <h4>Person 2: {person.person2.age} years old</h4>
     <button onClick={() => person.increaseAgePerson2Nested()}>
-      BUG! (useImmer, nested mutation in library)
+      2a. BUG! (useImmer, nested mutation in library)
     </button>
     <button onClick={() => increaseAgePerson2NestedThisRepo()}>
-      Increase age (nested mutation code in this codebase)
+      2b. Increase age (nested mutation code in this codebase)
     </button>
     <button onClick={() => person.increaseAgePerson2()}>
-      Increase age (useImmer - no nesting)
+      2c. Increase age (useImmer - no nesting)
     </button>
 
     <h4>Person 3: {person.person3.age} years old</h4>
     <button onClick={() => person.increaseAgePerson3Nested()}>
-      No bug (useImmer replica)
+      3. No bug (useImmer replica)
     </button>
 
     <h4>Person 4: {person4.age} years old</h4>
     <button onClick={() => increaseAgePerson4Nested()}>
-      No bug (useImmer, in same repo)
+      4. No bug (useImmer, in same repo)
     </button>
   </div>
 }
